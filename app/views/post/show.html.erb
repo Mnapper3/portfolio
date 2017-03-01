@@ -1,0 +1,29 @@
+<!-- Page Content -->
+<div class="container post-container">
+
+    <!-- Portfolio Item Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header"><%= @post.title %>
+                <small>built with Ruby on Rails</small>
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Portfolio Item Row -->
+    <div class="row">
+
+        <div class="col-md-8">
+            <%= image_tag @post.image, class: 'img-responsive', size: "500x500" %>
+        </div>
+
+        <div class="col-md-4">
+            <h3>Project Description</h3>
+            <p><%= @post.body %></p>
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>

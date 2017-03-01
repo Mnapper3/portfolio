@@ -1,0 +1,87 @@
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <%= image_tag("napp_bald.png", class: "img-circle", size: "400x300")  %>
+                    <div class="intro-text">
+                        <span class="name">Matt Napper</span>
+                        <hr class="star-light">
+                        <span class="skills">Web Developer - Graphic Design - Ruby On Rails</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+   <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Portfolio</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <% @posts.each do |post| %>
+                <div class="col-sm-4 portfolio-item">
+                    <%= link_to post_path(post) do %>
+                        <%= image_tag post.image, class: 'img-responsive' %>
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                    <% end %>
+                </div>
+                <% end %>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p>My name is Matt Napper im 31, and live in Elkhart, Indiana. I'm current going for my BS in Software Development at WGU. 
+                    <br> I enjoy Spray Paint Art, making cartoon images of people in PhotoShop, and building online apps. I enjoy these styles of creating and want to learn how to make a career out of it!</p>
+                </div>
+                <div class="col-lg-4">
+                    <p> I have been taking online courses at Udemy for Ruby on Rails for close to three months. <small>(2/25/17)</small>
+                    <br> I love the idea that I can create something and only have to rely on myself to finish it. There's nothing like getting an idea, and then going out an creating it.  </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <a href='mailto:nappdaddy2000@gmail.com?subject=This+is+a+test'>Email Me!</a><br>
+                <hr class="star-primary">
+            </div>
+        </div>
+</section>
+
+    
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    
